@@ -1,27 +1,17 @@
 plugins {
     id 'java'
-id 'pmd'
+    id 'pmd'
 }
 
 repositories {
-jcenter()
- //mavenCentral()
- //maven { url 'https://jitpack.io' }
+    jcenter()
 }
 
 dependencies {
- testImplementation platform("org.junit:junit-bom:5.9.3")
-    testImplementation "org.junit.jupiter:junit-jupiter"
-    testImplementation "org.assertj:assertj-core:3.24.2"
 }
-
 
 pmd {
-  consoleOutput = true
     toolVersion = "6.39.0"
- //rulesMinimumPriority = 5
- ruleSetFiles = files("pmd.xml")
-       ruleSets = []
+    ruleSetFiles = files("pmd.xml")
+    ruleSets = []
 }
-
-
