@@ -4,8 +4,9 @@ id 'pmd'
 }
 
 repositories {
- mavenCentral()
- maven { url 'https://jitpack.io' }
+jcenter()
+ //mavenCentral()
+ //maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -18,8 +19,9 @@ dependencies {
 pmd {
   consoleOutput = true
     toolVersion = "6.39.0"
- rulesMinimumPriority = 5
-       ruleSets = ["category/java/errorprone.xml"]
+ //rulesMinimumPriority = 5
+ ruleSetFiles = files("pmd.xml")
+       ruleSets = []
 }
 
 
